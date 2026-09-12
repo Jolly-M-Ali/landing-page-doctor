@@ -1,0 +1,785 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #172033;
+    background: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+
+/*  NAVBAR */
+
+.navbar {
+    background: #ffffff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 20px rgba(0,0,0,.05);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #123d52;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #12a6a0;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #52606d;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #12a6a0;
+}
+
+.nav-button,
+.primary-button {
+    background: #12a6a0;
+    color: white;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #07817c;
+    transform: translateY(-2px);
+}
+
+
+/*  HERO */
+
+.hero {
+    background: linear-gradient(
+        120deg,
+        #effafa,
+        #ffffff
+    );
+    padding: 90px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.small-title {
+    color: #12a6a0;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.hero h1 {
+    color: #123d52;
+    font-size: 57px;
+    line-height: 1.1;
+    margin: 18px 0 25px;
+}
+
+.hero h1 span,
+.about-text h2 span,
+.booking-info h2 span {
+    color: #12a6a0;
+}
+
+.hero-text > p {
+    color: #657482;
+    line-height: 1.8;
+    max-width: 570px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.secondary-button {
+    border: 1px solid #12a6a0;
+    color: #12a6a0;
+    padding: 13px 23px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.secondary-button:hover {
+    background: #12a6a0;
+    color: white;
+}
+
+.statistics {
+    display: flex;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.statistics div {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics strong {
+    color: #123d52;
+    font-size: 25px;
+}
+
+.statistics span {
+    color: #758492;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* Hero Image */
+.hero-doctor-image {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 24px;
+}
+
+
+
+.doctor-badge {
+    position: absolute;
+    left: -35px;
+    bottom: 35px;
+    background: white;
+    padding: 17px 22px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #dff7f5;
+    color: #12a6a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.doctor-badge strong,
+.doctor-badge span {
+    display: block;
+}
+
+.doctor-badge strong {
+    color: #123d52;
+    font-size: 13px;
+}
+
+.doctor-badge span {
+    color: #84919c;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 100px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image {
+    height: 450px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-text h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #123d52;
+    margin: 17px 0 20px;
+}
+
+.about-text > p {
+    color: #687784;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.feature-icon {
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #e2f7f5;
+    color: #12a6a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.feature h3 {
+    font-size: 15px;
+    color: #123d52;
+    margin-bottom: 4px;
+}
+
+.feature p {
+    font-size: 12px;
+    color: #7a8791;
+}
+
+
+/* SERVICES  */
+
+.services {
+    padding: 100px 0;
+    background: #f7fbfb;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: auto auto 50px;
+}
+
+.section-heading h2 {
+    color: #123d52;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #75838e;
+    line-height: 1.7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(18,61,82,.06);
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(18,61,82,.12);
+}
+
+.service-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 25px;
+}
+
+.service-number {
+    color: #12a6a0;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.service-content h3 {
+    color: #123d52;
+    margin: 8px 0;
+    font-size: 19px;
+}
+
+.service-content p {
+    color: #75838e;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.service-content a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #12a6a0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* DOCTOR  */
+
+.doctor-section {
+    padding: 100px 0;
+}
+
+.doctor-content {
+    background: #effafa;
+    border-radius: 25px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.profile-doctor-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center 45%;
+    border-radius: 20px;
+}
+.doctor-details h2 {
+    color: #123d52;
+    font-size: 38px;
+    margin: 15px 0 5px;
+}
+
+.doctor-details h3 {
+    color: #12a6a0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.rating {
+    color: #f5a623;
+    margin: 15px 0;
+}
+
+.rating span {
+    color: #667580;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.doctor-details > p {
+    color: #687784;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.doctor-info-grid {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.doctor-info-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-info-grid strong {
+    color: #123d52;
+    font-size: 22px;
+}
+
+.doctor-info-grid span {
+    color: #75838e;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+/* BOOKING */
+
+.booking {
+    padding: 100px 0;
+    background: #f7fbfb;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.booking-info h2 {
+    color: #123d52;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 17px 0;
+}
+
+.booking-info > p {
+    color: #687784;
+    line-height: 1.8;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.contact-item strong,
+.contact-item span {
+    display: block;
+}
+
+.contact-item strong {
+    color: #123d52;
+    font-size: 13px;
+}
+
+.contact-item span {
+    color: #7a8791;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.working-hours {
+    margin-top: 30px;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.working-hours h3 {
+    color: #123d52;
+    margin-bottom: 12px;
+}
+
+.working-hours p {
+    display: flex;
+    justify-content: space-between;
+    color: #75838e;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.working-hours strong {
+    color: #123d52;
+}
+
+
+/* FORM  */
+
+.booking-form {
+    background: white;
+    padding: 38px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(18,61,82,.08);
+}
+
+.booking-form h2 {
+    color: #123d52;
+    font-size: 25px;
+}
+
+.form-subtitle {
+    color: #8a969e;
+    font-size: 12px;
+    margin: 5px 0 25px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    color: #354b59;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce5e8;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #12a6a0;
+    box-shadow: 0 0 0 3px rgba(18,166,160,.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group small {
+    display: block;
+    color: #e05252;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.submit-button {
+    width: 100%;
+    border: none;
+    background: #12a6a0;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-button:hover {
+    background: #07817c;
+    transform: translateY(-2px);
+}
+
+.success-message {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    background: #e1f7ed;
+    color: #16764c;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #123d52;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    color: #b9c9d1;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+/* RESPONSIVE  */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-content,
+    .about-content,
+    .booking-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .doctor-content {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-photo {
+        height: 450px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .statistics {
+        gap: 20px;
+    }
+
+    .statistics strong {
+        font-size: 20px;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .doctor-badge {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .section-heading h2,
+    .about-text h2,
+    .booking-info h2 {
+        font-size: 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-content {
+        padding: 25px;
+    }
+
+    .doctor-details h2 {
+        font-size: 30px;
+    }
+
+    .doctor-info-grid {
+        gap: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-form {
+        padding: 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
